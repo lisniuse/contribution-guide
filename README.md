@@ -34,11 +34,12 @@ $ git remote -v
 
 ```bash
 $ git pull author master
+$ git reset 
 ```
 
 ## 强制重制方法
 
-慎用
+用于同步原作者的commitId。
 
 ```bash
 $ git reset --hard commitid
@@ -47,6 +48,21 @@ $ git push -f master
 
 ## rebase用法
 
-## Vue.js 贡献指南中文版
+用于合并自己本地分支的冗余commit，指定一个为最终commit。
 
-[移步](./.github/CONTRIBUTING.md)
+```bash
+$ git rebase -i commitid
+```
+
+或者合并最新的两个分支。
+
+```bash
+$ git rebase -i HEAD~2 
+```
+
+## 各大著名贡献指南
+
+- [Vuejs贡献指南中文版](./.github/CONTRIBUTING.md)
+- [Angular.js贡献指南](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md)
+- [Reactjs贡献指南](https://reactjs.org/docs/how-to-contribute.html)
+- [Webpack贡献指南](https://medium.com/webpack/contributors-guide/home)
