@@ -54,7 +54,7 @@ $ git push -f master
 $ git rebase -i commitid
 ```
 
-或者合并最新的两个分支。
+或者最新的两个commit。
 
 ```bash
 $ git rebase -i HEAD~2 
